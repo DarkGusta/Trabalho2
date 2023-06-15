@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body class="font-sans m-0 p-0 bg-white">
+    <div
+      class="mw-[400px] m-auto p-[20px] bg-gray-50 rounded-md shadow-black mt-[100px]"
+    >
+      <h2 class="text-center">Login</h2>
+      <div id="loginResult"></div>
+      <div id="loginForm">
+        <div class="mb-[20px]">
+          <label class="block mb-[5px]" for="username">username:</label>
+          <input
+            class="w-full p-[10px] text-base border-2 border-solid border-gray-400 rounded"
+            type="username"
+            id="username"
+            name="username"
+            placeholder="Enter your gayname"
+            required
+          />
+        </div>
+        <div class="mb-[20px]">
+          <label class="block mb-[5px]" for="password">Password:</label>
+          <input
+            class="w-full p-[10px] text-base border-2 border-solid border-gray-400 rounded"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your ass"
+            required
+          />
+        </div>
+        <div class="mb-[20px]">
+          <button
+            class="block w-full p-[10px] text-base bg-white border-none border-4 cursor-pointer"
+            type="button"
+            onclick="login()"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+      <div id="todoResult"></div>
+    </div>
+
+    <script>
+      function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Replace with your login endpoint URL
+        const url = "http://localhost:4242/api/user/login";
+
+        const requestBody = { username, password };
+
+        fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestBody),
+        })
+          .then((data) => {
+            localStorage.setItem("token", data.token);
+
+            // Handle login response
+            document.getElementById("loginResult").innerHTML =
+              JSON.stringify(data);
+
+            // Redirect to index page if username and password are correct
+            window.location.href = "./CV.html";
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+    </script>
+  </body>
+</html>

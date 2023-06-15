@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+  <title>MY CV</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <body class="w3-light-grey">
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width: 1400px">
+      <!-- The Grid -->
+      <div class="w3-row-padding">
+        <!-- Left Column -->
+        <div class="w3-third">
+          <div class="w3-white w3-text-grey w3-card-4">
+            <div class="w3-display-container">
+              <img
+                src="./images/euzinho.jpg"
+                style="width: 100%"
+                alt="Avatar"
+              />
+              <div class="w3-display-bottomleft w3-container w3-text-white">
+                <h2>César Vieira</h2>
+              </div>
+            </div>
+            <div class="w3-container">
+              <p>
+                <i
+                  class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"
+                ></i
+                >Student
+              </p>
+              <p>
+                <i
+                  class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"
+                ></i
+                >Guimarães, PT
+              </p>
+              <p>
+                <i
+                  class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"
+                ></i
+                >cesarsilvavieira@gmail.com
+              </p>
+              <p>
+                <i
+                  class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"
+                ></i
+                >934855719
+              </p>
+              <hr />
+
+              <p class="w3-large">
+                <b
+                  ><i
+                    class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"
+                  ></i
+                  >Skills</b
+                >
+              </p>
+              <p>Networking</p>
+              <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div
+                  class="w3-container w3-center w3-round-xlarge w3-teal"
+                  style="width: 80%"
+                >
+                  80%
+                </div>
+              </div>
+              <p>Ethical Hacking</p>
+              <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div
+                  class="w3-container w3-center w3-round-xlarge w3-teal"
+                  style="width: 50%"
+                >
+                  <div class="w3-center w3-text-white">50%</div>
+                </div>
+              </div>
+              <p>HTML</p>
+              <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div
+                  class="w3-container w3-center w3-round-xlarge w3-teal"
+                  style="width: 75%"
+                >
+                  75%
+                </div>
+              </div>
+              <p>Javascript</p>
+              <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div
+                  class="w3-container w3-center w3-round-xlarge w3-teal"
+                  style="width: 25%"
+                >
+                  25%
+                </div>
+              </div>
+              <br />
+
+              <p class="w3-large w3-text-theme">
+                <b
+                  ><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i
+                  >Languages</b
+                >
+              </p>
+              <p>English</p>
+              <div class="w3-light-grey w3-round-xlarge">
+                <div
+                  class="w3-round-xlarge w3-teal"
+                  style="height: 24px; width: 100%"
+                ></div>
+              </div>
+              <p>Spanish</p>
+              <div class="w3-light-grey w3-round-xlarge">
+                <div
+                  class="w3-round-xlarge w3-teal"
+                  style="height: 24px; width: 55%"
+                ></div>
+              </div>
+              <p>French</p>
+              <div class="w3-light-grey w3-round-xlarge">
+                <div
+                  class="w3-round-xlarge w3-teal"
+                  style="height: 24px; width: 25%"
+                ></div>
+              </div>
+              <br />
+            </div>
+          </div>
+          <br />
+
+          <!-- End Left Column -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-twothird">
+          <!-- Work Experience column -->
+          <div
+            id="workexp"
+            class="w3-container w3-card w3-white w3-margin-bottom pt-2 w3-round-large"
+          >
+            <div class="flex flex-row divide-x border-2 bg-[#009688] rounded-lg">
+              <button class="flex-1" onclick="addWorkExp()">Add</button>
+              <button class="flex-1" onclick="promptEditWorkExp()">Edit</button>
+              <button class="flex-1" onclick="promptRemoveWorkExp()">
+                Delete
+              </button>
+            </div>
+            <h2 class="w3-text-grey w3-padding-16">
+              <i
+                class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"
+              ></i
+              >Work Experience
+            </h2>
+            <div id="workExpContainer"></div>
+          </div>
+
+          <!--Education Tab-->
+          <div class="w3-container w3-card w3-white w3-round-large pt-2">
+            <div class="flex flex-row divide-x border-2 bg-[#009688] rounded-lg">
+              <button class="flex-1" onclick="addEducation()">Add</button>
+              <button class="flex-1" onclick="promptEditEducation()">Edit</button>
+              <button class="flex-1" onclick="promptRemoveEducation()">Delete</button>
+            </div>
+            <h2 class="w3-text-grey w3-padding-16">
+              <i
+                class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"
+              ></i
+              >Education
+            </h2>
+            <div id="educationContainer"></div>
+          </div>
+
+          <!-- End Right Column -->
+        </div>
+
+        <!-- End Grid -->
+      </div>
+
+      <!-- End Page Container -->
+    </div>
+
+    <footer class="w3-container w3-teal w3-center w3-margin-top">
+      <p>Find me on social media.</p>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <p>
+        Powered by
+        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+          >w3.css</a
+        >
+      </p>
+    </footer>
+  </body>
+  <script>
+    // JavaScript code
+    window.onload = (event) => {
+      getWorkExp();
+      getEducation();
+      //checkAuthentication();
+    };
+    // Listener function
+    function getWorkExp() {
+      const url = "http://localhost:4242/api/workexp/getall";
+
+      // Make an HTTP GET request to fetch all work experience entries
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data); // Log the retrieved data to the console
+
+          const workExpEntries = data.workExpEntries; // Access the nested array
+
+          const container = document.getElementById("workExpContainer");
+
+          // Clear the existing entries before adding new ones
+          container.innerHTML = "";
+
+          workExpEntries.forEach((workExp) => {
+            const { id, job, date, jobDescription } = workExp;
+            const workExpCol = document.createElement("div");
+            workExpCol.className = "w3-container";
+
+            const workHeader = document.createElement("h5");
+            workHeader.className = "w3-opacity";
+            workHeader.innerHTML = `<b>${workExp.job}</b>`;
+
+            const workDate = document.createElement("h6");
+            workDate.className = "w3-text-teal";
+            workDate.innerHTML = `<i class="fa fa-calendar fa-fw w3-margin-right"></i>${workExp.date}`;
+
+            const workDescription = document.createElement("p");
+            workDescription.innerHTML = `<b class="font-mono">${workExp.jobDescription}</b>`;
+
+            workExpCol.appendChild(workHeader);
+            workExpCol.appendChild(workDate);
+            workExpCol.appendChild(workDescription);
+
+            container.appendChild(workExpCol);
+          });
+
+          // Store the data in localStorage
+          //localStorage.setItem("workExpEntries", JSON.stringify(data));
+        })
+        .catch((error) => {
+          console.error("Error retrieving work experience entries:", error);
+        });
+    }
+
+    function addWorkExp() {
+      const url = "http://localhost:4242/api/workexp/create";
+      // Prompt the user for input
+      const date = prompt("Enter the date:");
+      const profession = prompt("Enter the profession:");
+      const description = prompt("Enter the description:");
+
+      // Create the new work experience entry object
+      const newWorkExp = {
+        date: date,
+        job: profession,
+        jobDescription: description,
+      };
+
+      // Make an HTTP POST request to add the new work experience entry
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newWorkExp),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("New work experience entry added successfully:", data);
+
+          // If the entry was added successfully, you can update the UI or fetch all entries again to refresh the list
+          getWorkExp();
+        })
+        .catch((error) => {
+          console.error("Error adding work experience entry:", error);
+        });
+    }
+
+    function promptRemoveWorkExp() {
+      const name = prompt(
+        "Enter the name of the work experience entry to remove:"
+      );
+      if (name) {
+        removeWorkExpByName(name);
+      }
+    }
+
+    function promptEditWorkExp() {
+      const name = prompt(
+        "Enter the name of the work experience entry to remove:"
+      );
+      if (name) {
+        editWorkExpByName(name);
+      }
+    }
+
+    function removeWorkExpByName(name) {
+      const url = `http://localhost:4242/api/workexp/delete/${name}`;
+      // Make an HTTP DELETE request to remove the work experience entry by its name
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Work experience entry removed successfully:", data);
+
+          // If the entry was removed successfully, you can update the UI or fetch all entries again to refresh the list
+          getWorkExp();
+        })
+        .catch((error) => {
+          console.error("Error removing work experience entry:", error);
+        });
+    }
+
+    function editWorkExpByName(name) {
+      const url = `http://localhost:4242/api/workexp/edit/${name}`;
+
+      // Prompt the user for the updated information
+      const updatedJob = prompt("Enter the updated job:");
+      const updatedDate = prompt("Enter the updated date:");
+      const updatedDescription = prompt("Enter the updated description:");
+
+      // Create an object with the updated data
+      const updatedData = {
+        job: updatedJob,
+        date: updatedDate,
+        jobDescription: updatedDescription,
+      };
+
+      console.log(updatedData);
+
+      // Make an HTTP PUT request to update the work experience entry
+      fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Work experience entry updated successfully:", data);
+
+          // If the entry was updated successfully, you can update the UI or fetch all entries again to refresh the list
+          getWorkExp();
+        })
+        .catch((error) => {
+          console.error("Error updating work experience entry:", error);
+        });
+    }
+
+    function getEducation() {
+      const url = "http://localhost:4242/api/education/getall";
+
+      // Make an HTTP GET request to fetch all education entries
+      fetch(url)
+        .then((response) => response.json())
+        .then((responseData) => {
+          console.log(responseData); // Log the retrieved data to the console
+
+          const educationEntries = responseData.data; // Access the nested array
+
+          console.log(educationEntries);
+
+          const container = document.getElementById("educationContainer");
+
+          // Clear the existing entries before adding new ones
+          container.innerHTML = "";
+
+          educationEntries.forEach((education) => {
+            const { id, school, date, educationDescription } = education;
+            const educationCol = document.createElement("div");
+            educationCol.className = "w3-container";
+
+            const educationHeader = document.createElement("h5");
+            educationHeader.className = "w3-opacity";
+            educationHeader.innerHTML = `<b>${education.school}</b>`;
+
+            const educationDate = document.createElement("h6");
+            educationDate.className = "w3-text-teal";
+            educationDate.innerHTML = `<i class="fa fa-calendar fa-fw w3-margin-right"></i>${education.date}`;
+
+            const educDescription = document.createElement("p");
+            educDescription.innerHTML = `<b class="font-mono">${education.educationDescription}</b>`;
+
+            educationCol.appendChild(educationHeader);
+            educationCol.appendChild(educationDate);
+            educationCol.appendChild(educDescription);
+
+            container.appendChild(educationCol);
+          });
+        })
+        .catch((error) => {
+          console.error("Error retrieving education entries:", error);
+        });
+    }
+
+    function promptRemoveEducation() {
+      const name = prompt(
+        "Enter the name of the work experience entry to remove:"
+      );
+      if (name) {
+        removeEducationByName(name);
+      }
+    }
+
+    function promptEditEducation() {
+      const name = prompt(
+        "Enter the name of the work experience entry to remove:"
+      );
+      if (name) {
+        editEducationByName(name);
+      }
+    }
+
+    function addEducation() {
+      const url = "http://localhost:4242/api/education/create";
+      // Prompt the user for input
+      const date = prompt("Enter the date:");
+      const school = prompt("Enter the profession:");
+      const description = prompt("Enter the description:");
+
+      // Create the new education entry object
+      const newEducation = {
+        date: date,
+        school: school,
+        educationDescription: description,
+      };
+
+      // Make an HTTP POST request to add the new education entry
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newEducation),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("New education entry added successfully:", data);
+
+          // If the entry was added successfully, you can update the UI or fetch all entries again to refresh the list
+          getEducation();
+        })
+        .catch((error) => {
+          console.error("Error adding education entry:", error);
+        });
+    }
+
+    function removeEducationByName(name) {
+      const url = `http://localhost:4242/api/education/delete/${name}`;
+      // Make an HTTP DELETE request to remove the education entry by its name
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Education entry removed successfully:", data);
+
+          // If the entry was removed successfully, you can update the UI or fetch all entries again to refresh the list
+          getEducation();
+        })
+        .catch((error) => {
+          console.error("Error removing education entry:", error);
+        });
+    }
+
+    function editEducationByName(name) {
+      const url = `http://localhost:4242/api/education/edit/${name}`;
+
+      // Prompt the user for the updated information
+      const updatedSchool = prompt("Enter the updated job:");
+      const updatedDate = prompt("Enter the updated date:");
+      const updatedDescription = prompt("Enter the updated description:");
+
+      // Create an object with the updated data
+      const updatedData = {
+        school: updatedSchool,
+        date: updatedDate,
+        educationDescription: updatedDescription,
+      };
+
+      console.log(updatedData);
+
+      // Make an HTTP PUT request to update the education entry
+      fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Education entry updated successfully:", data);
+
+          // If the entry was updated successfully, you can update the UI or fetch all entries again to refresh the list
+          getEducation();
+        })
+        .catch((error) => {
+          console.error("Error updating work experience entry:", error);
+        });
+    }
+
+    /*function checkAuthentication() {
+      // Verify the token
+      const token = localStorage.getItem("token");
+      const isAuthenticated = token !== null;
+
+      // Get the button elements
+      const addWorkExpBtn = document.getElementById("addWorkExpBtn");
+      const deleteWorkExpBtn = document.getElementById("deleteWorkExpBtn");
+      const editWorkExpBtn = document.getElementById("editWorkExpBtn");
+      const addEducationBtn = document.getElementById("addEducationBtn");
+      const deleteEducationBtn = document.getElementById("deleteEducationBtn");
+      const editEducationBtn = document.getElementById("editEducationBtn");
+
+      // Show or hide the buttons depending on the token
+      addWorkExpBtn.style.display = isAuthenticated ? "block" : "none";
+      deleteWorkExpBtn.style.display = isAuthenticated ? "block" : "none";
+      editWorkExpBtn.style.display = isAuthenticated ? "block" : "none";
+      addEducationBtn.style.display = isAuthenticated ? "block" : "none";
+      deleteEducationBtn.style.display = isAuthenticated ? "block" : "none";
+      editEducationBtn.style.display = isAuthenticated ? "block" : "none";
+    }*/
+  </script>
+</html>

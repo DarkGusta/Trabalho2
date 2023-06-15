@@ -1,0 +1,42 @@
+{
+  "nome": "Cesar Vieira",
+  "data_nascimento": "2001-08-30",
+  "localidade": "Guimaraes",
+  "hab_academicas": [
+    {
+      "grau": "Ensino Superior",
+      "instituicao": "IPVC - ESTG",
+      "tipo_curso": "Licenciatura",
+      "nome_curso": "ERSC",
+      "data_inicio": "2019-09-01",
+      "data_fim": "2023-07-01"
+    }
+  ],
+  "hab_profissionais": [
+    {
+      "data_inicio": "2018-06-01",
+      "data_fim": "2022-06-01",
+      "posicao": "Web Developer",
+      "empresa": "Xpand-it"
+    },
+    {
+      "data_inicio": "2022-06-01",
+      "data_fim": "2022-06-15",
+      "posicao": "Senior FullStack Developer",
+      "empresa": "NearSea Tecnologies"
+    },
+    {
+      "data_inicio": "2022-06-16",
+      "data_fim": null,
+      "posicao": "Head of Software Development Team",
+      "empresa": "NearSea Tecnologies"
+    },
+    {
+      "data_inicio": "2021-02-01",
+      "data_fim": null,
+      "posicao": "Prof convidado",
+      "empresa": "IPVC"
+    }
+  ],
+  "projetos": []
+}
