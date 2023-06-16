@@ -409,7 +409,7 @@
 
     function promptRemoveEducation() {
       const name = prompt(
-        "Enter the name of the work experience entry to remove:"
+        "Enter the name of the education entry to remove:"
       );
       if (name) {
         removeEducationByName(name);
@@ -418,7 +418,7 @@
 
     function promptEditEducation() {
       const name = prompt(
-        "Enter the name of the work experience entry to remove:"
+        "Enter the name of the education entry to remove:"
       );
       if (name) {
         editEducationByName(name);
@@ -429,7 +429,7 @@
       const url = "http://localhost:4242/api/education/create";
       // Prompt the user for input
       const date = prompt("Enter the date:");
-      const school = prompt("Enter the profession:");
+      const school = prompt("Enter the school:");
       const description = prompt("Enter the description:");
 
       // Create the new education entry object
@@ -481,7 +481,7 @@
       const url = `http://localhost:4242/api/education/edit/${name}`;
 
       // Prompt the user for the updated information
-      const updatedSchool = prompt("Enter the updated job:");
+      const updatedSchool = prompt("Enter the updated school:");
       const updatedDate = prompt("Enter the updated date:");
       const updatedDescription = prompt("Enter the updated description:");
 
